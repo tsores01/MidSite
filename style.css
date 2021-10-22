@@ -1,0 +1,78 @@
+body {
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-image: url("concert.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #fff;
+}
+  
+.topnav a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 16px 48px 16px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.topnav div.heightSpacer {
+    padding: 6px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+}
+
+h3 {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin: 8px;
+}
+
+footer {
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a.curateButton {
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 7px;
+    background-color: #4373C4;
+    color: #fff;
+    padding: 5px 20px;
+    border: 2px solid #fff;
+    display: block;
+    width: 300px;
+    position: relative;
+    left: 50%;
+    margin: 50px 0 100px -150px;
+}
+
+a.curateButton:hover {
+    background-color: #fff;
+    color: #4373C4
+}
