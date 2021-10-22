@@ -1,3 +1,8 @@
+
+* {
+  font-family: 'Times New Roman', Times, serif;
+ }
+
 body {
   margin: 0px;
   background-color: #fafafa;
@@ -29,4 +34,77 @@ img.one {
 .topnav a:hover {
   background-color: #389F16;
   color: #000000;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.2em;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+}
+
+.column {
+  float: left;
+  width: 46%;
+  padding: 0 4% 0 0;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.button:hover {
+  background-color: #aa0404; 
+  color: rgb(255, 255, 255);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+a:hover {
+  color: #aa0404;
+}
+
+.button {
+  background-color: #0D0F0F; 
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  transition-duration: 0.4s;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+.button:hover {
+  background-color: #aa0404; 
+  color: rgb(255, 255, 255);
+}
+ 
+
+@media only screen and (max-width: 768px) {
+
+  .column {
+      width: 100%;
+    }
 }
