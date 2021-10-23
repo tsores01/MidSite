@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<head>
+    <title>TEMP TITLE</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #something {
+            padding: 4em 0 0 4em;
+        }
+    </style>
+    <script>
+        function validate() {
+            err = false;
+            with (document.data) {
+                if (!range1.checked && !range2.checked && !range3.checked && !range4.checked && !range5.checked) {
+                    alert("Please specify at least 1 price range.");
+                    err = true;
+                }
+
+                if (!years1.checked && !years2.checked && !years3.checked && !years4.checked && !years5.checked) {
+                    alert("Please specify at least 1 year range.");
+                    err = true;
+                }
+
+                if (!pc.checked && !Xbox.checked && !PlayStation.checked && !Switch.checked) {
+                    alert("Please specify at least 1 platform.");
+                    err = true;
+                }
+            }
+        }
+
+        function makeImageArray() {
+            var imgArray = newArray();
+
+            for (i = 0; i < 20; i++) {
+                imgArray[0] = new Image();
+            }
+
+            imgArray[0].src = "animal-crossing.jfif";
+            imgArray[1].src = "bloodborne.jfif";
+            imgArray[2].src = "danganronpa.jpg";
+            imgArray[3].src = "donkey-kong.jpg";
+            imgArray[4].src = "fable-2.png";
+            imgArray[5].src = "fallout-3.png";
+            imgArray[6].src = "fire-emblem.jpg";
+            imgArray[7].src = "forza-horizon-4.jpg";
+            imgArray[8].src = "gears-of-war.jpg";
+            imgArray[9].src = "god-of-war.jpeg";
+            imgArray[10].src = "half-life-2.jpg";
+            imgArray[11].src = "halo.jpg";
+            imgArray[12].src = "minecraft.jpg";
+            imgArray[13].src = "ori.jpg";
+            imgArray[14].src = "red-dead-redemption.jpg";
+            imgArray[15].src = "terraria.jpg";
+            imgArray[16].src = "the-last-of-us.jpg";
+            imgArray[17].src = "the-witcher-3.jfif";
+            imgArray[18].src = "xenoblade-2.jpg";
+            imgArray[19].src = "zelda.jpg";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href = "adad"><img src="kira.jpg" width="30" height="15"> </a>
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    <div id="something">
+        <h1 style="text-align: left; padding-left: 0;">Specify your interests</h1>
+        <form name="data" style="padding-left: 0">
+            <div>Select your price range(s):</div>
+            <input type="radio" id="range1" name="price" value="range1">
+            <label for="range1"> Under $30</label><br>
+            <input type="radio" id="range2" name="price" value="range2">
+            <label for="range1"> Under $60</label><br><br>
+            <div>Select your desired release date(s):</div>
+            <input type="radio" id="years1" name="years" value="years1">
+            <label for="years1"> 2000 - 2005</label><br>
+            <input type="radio" id="years2" name="years" value="years2">
+            <label for="years2"> 2006 - 2010</label><br>
+            <input type="radio" id="years3" name="years" value="years3">
+            <label for="years3"> 2011 - 2015</label><br>
+            <input type="radio" id="years4" name="years" value="years4">
+            <label for="years4"> 2016 - 2020</label><br>
+            <input type="radio" id="years5" name="years" value="years5">
+            <label for="years5"> 2021 - Today</label><br><br>
+            <div>Select your platform(s):</div>
+            <input type="radio" id="pc" name="platform" value="pc">
+            <label for="pc"> PC</label>
+            <input type="radio" id="Xbox" name="platform" value="Xbox">
+            <label for="Xbox"> Xbox</label>
+            <input type="radio" id="PlayStation" name="platform" value="PlayStation">
+            <label for="PlayStation"> PlayStation</label>
+            <input type="radio" id="Switch" name="platform" value="Switch">
+            <label for="Switch"> Switch</label><br><br>
+            <input type="submit" value="Submit" onclick="validate()">
+        </form>
+    </div>
+</body>
+
+</html>
+
+<!--make submit button blue-->
+<!--include Document Object by opening new window (either $30 or $60)-->>
