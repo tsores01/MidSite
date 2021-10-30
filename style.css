@@ -13,6 +13,21 @@ body {
   background-color: #fafafa;
 }
 
+#image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url("grey-triangle-pattern-seamless-background-1.jpg");
+  }
+
 img.one {
   height: 100%;
   max-height: 300px;
