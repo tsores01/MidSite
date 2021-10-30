@@ -3,11 +3,13 @@
   font-family: 'Times New Roman', Times, serif;
  }
 
-.mainbody {
-  padding: 4em 0 0  0;
+.spacer {
+  padding: 14px 12px;
+  text-decoration: none;
+  font-size: 18px;
 }
 body {
-  margin: 0px;
+  margin: 0;
   background-color: #fafafa;
 }
 
@@ -54,9 +56,6 @@ p {
   font-size: 17px;
 }
 
-body {
-  margin: 0;
-}
 
 .column {
   float: left;
