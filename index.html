@@ -7,37 +7,69 @@
 <title>VidiSite</title>
 <style>
     h1 {
+        font-size: 3em;
         padding: 1em;
         margin: 0;
+        letter-spacing: .1em;
     }
     h2 {
+        font-size: 2em;
         text-align: center;
     }
+    h3 {
+        font-size: 1.5em;
+        text-align: center;
+        font-weight: 500;
+    }
     #bg {
-        width: 20%;
-        height: 20em;
-        padding: 0 2.3%;
+        height: 15em;
         overflow: hidden;
-        margin-left:auto;
-        margin-right:auto;
-        display: inline-block;
+    }
+    #newsbg {
+        padding: 2em 0;
+        height: 15em;
+        overflow: hidden;
+        display: block;
+        vertical-align: middle;
+        margin: auto;
     }
     #mainbody {
+        padding: 1em 0;
         margin: 1%;
         background-color: #f0f0f0;
         box-sizing: border-box;
     }
+    #imgcarousel {
+        width: 100%;
+    }
+    #image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5bfd4f00710699387b6a460a/1543419663922-5HSYZTBIDEIQ14V7X7K6/darkbg.jpg?format=2500w");
+    }
+    .column p {
+        text-align: center;
+    }
 @media only screen and (max-width: 1280px) {
   #bg {
-      height: 15em;
-      padding: 0 2.3%;
+      height: 12em;
+      padding: 0 2.25%;
   }
 }
 
 @media only screen and (max-width: 768px) {
     #bg {
-        height: 10em;
-        padding: 0 2%;
+        height: 7em;
+        padding: 0 2.1%;
     }
 }
 </style>
@@ -50,14 +82,58 @@
     <a href="contact.html">Contact Us</a>
 </div>
 <div class="spacer">a</div>
+<div id="image"></div>
 
     <div id="mainbody">
     <h1>VidiSite</h1>
-    <img id="bg" src="kira.jpg">
-    <img id="bg" src="kira.jpg">
-    <img id="bg" src="kira.jpg"> 
-    <img id="bg" src="kira.jpg"> 
-    <h2>Sample text</h2>
+    <ul class="list">
+        <li><img id="bg" src="zelda.jpg"></li>
+        <li><img id="bg" src="the-last-of-us.jpg"></li>
+        <li><img id="bg" src="forza-horizon-4.jpg"> </li>
+        <li><img id="bg" src="half-life-2.jpg"> </li>
+        <li><img id="bg" src="red-dead-redemption.jpg"> </li>
+    </ul>
+    <h2>Welcome to the nexus of video games</h2>
+    <h3 style="padding:0em 25%;">Want to surprise a special someone but not sure what to get? Trying to find a new game to play 
+        but tired of going through all the different video game stores? Just browsing? You've come to the right place! 
+        Here at VidiSite we specialize in cataloging only the best video games, so you can find them all in one
+        place!</h3>
+
+        
+        <h3>NEWS</h3>
+    <div style="padding: 0 2em"class="row">
+        <div class="column">
+            <div class="column">
+                <h3>New XBOX games coming Fall 2022</h3>
+                <p>The Xbox Game Pass library seems to get bigger every day. 
+                    And while games occasionally disappear from the service, 
+                    including several that are leaving Game Pass after this 
+                    month, new titles are added regularly. This includes one 
+                    surprise PC title that just landed on consoles.</p>
+                    <p>Read more <a>here</a>.</p>
+            </div>
+            <div class="column">
+            <img id="newsbg" src="Xbox_Game_Pass_Arrow_logo.jpg">
+            </div>
+        </div>
+        <div class="column">
+            <div class="column">
+                <h3>Sony's Next PlayStation Game Coming To PC May Have Been Revealed</h3>
+                <p>Sony is bringing more of its games to PC, and the company has 
+                    even established a new publishing arm called PlayStation PC. 
+                    Now, one of the company's next console games to come to PC 
+                    may have been revealed--it might be Sackboy: A Big Adventure. 
+                    SteamDB has been updated with a new title with the codename 
+                    "Steel PC," and the listing also mentions something called 
+                    "Marmalade."</p>
+                    <p>Read more <a>here</a>.</p>
+            </div>
+            <div class="column">
+            <img id="newsbg" src="news.png">
+            </div>
+        </div>
+      </div>
+    
     </div>
 </div>
 </body>
