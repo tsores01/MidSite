@@ -7,27 +7,38 @@
 <title>VidiSite</title>
 <style>
     h1 {
-        padding: 1.4em;
+        padding: 1em;
+        margin: 0;
+    }
+    h2 {
+        text-align: center;
     }
     #bg {
         width: 20%;
         height: 20em;
-        padding: 0 2%;
+        padding: 0 2.3%;
         overflow: hidden;
         margin-left:auto;
         margin-right:auto;
         display: inline-block;
     }
-    @media only screen and (max-width: 768px) {
-
-    #bg {
+    #mainbody {
+        margin: 1%;
+        background-color: #f0f0f0;
+        box-sizing: border-box;
     }
-    
-}
 @media only screen and (max-width: 1280px) {
-
   #bg {
+      height: 15em;
+      padding: 0 2.3%;
   }
+}
+
+@media only screen and (max-width: 768px) {
+    #bg {
+        height: 10em;
+        padding: 0 2%;
+    }
 }
 </style>
 </head>
@@ -38,13 +49,16 @@
     <a href="services.html">Our Services</a>
     <a href="contact.html">Contact Us</a>
 </div>
+<div class="spacer">a</div>
 
-    <div class="mainbody">
+    <div id="mainbody">
     <h1>VidiSite</h1>
     <img id="bg" src="kira.jpg">
     <img id="bg" src="kira.jpg">
     <img id="bg" src="kira.jpg"> 
     <img id="bg" src="kira.jpg"> 
+    <h2>Sample text</h2>
+    </div>
 </div>
 </body>
 </html>
