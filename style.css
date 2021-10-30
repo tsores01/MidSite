@@ -52,6 +52,8 @@ h2 {
   font-size: 1.5em;
 }
 
+
+
 p {
   font-size: 17px;
 }
@@ -59,8 +61,7 @@ p {
 
 .column {
   float: left;
-  width: 46%;
-  padding: 0 4% 0 0;
+  width: 50%;
 }
 
 .row:after {
@@ -103,6 +104,22 @@ a:hover {
   color: rgb(255, 255, 255);
 }
  
+.list {
+  margin:0;
+  padding: 0;
+  list-style-type: none;
+  display: table;
+  table-layout: fixed;
+  width:100%;
+  background-image: url(pattern.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.list>li {
+  display: table-cell;
+  padding: 0 5px;
+  text-align: center;
+}
 
 @media only screen and (max-width: 768px) {
   .column {
