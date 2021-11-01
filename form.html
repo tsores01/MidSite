@@ -50,6 +50,7 @@
     <script>
 
         function validate() {
+		 winarr = new Array("under30.html","over30.html");
             err = false;
             with (document.data) {
                 if (!range1.checked && !range2.checked) {
@@ -69,9 +70,9 @@
 
                 if (!err) {
                     if (range1.checked) {
-                        window.open("under30.html");
+                        window.open(winarr[0]);
                     } else {
-                        window.open("over30.html");
+                        window.open(winarr[1]);
                     }
                 }
             }
