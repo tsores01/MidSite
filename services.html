@@ -2,19 +2,134 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TEMPHOME</title>
+		<title>Services</title>
+        <style>
+		    p {
+			 padding: 0 4% 0 0;
+			}
+            #contact {
+                padding: 0 0 0 4%;
+                box-sizing: border-box;
+            }
+            #contact h1,h2{
+                font-weight: 600;
+                padding:0;
+            }
+            #contact h1 {
+              text-align: left;
+              margin-bottom: .7%;
+              margin: 0;
+            }
+            #contact h2 {
+              margin-top: 0%;
+            }
+            #contact a {
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+            }
+            #contact a:hover {
+                color: #389F16;
+            }
+            .column {
+              float: left;
+              width: 46%;
+              padding: 0 4% 0 0;
+            }
+            #mainbody {
+            padding: 2em 0;
+            margin: 1%;
+            background-color: #f0f0f0;
+            box-sizing: border-box;
+        }
+            </style>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("#div1").fadeIn(800);
+				$("#div2").fadeIn(1200);
+			    $("#div3").fadeIn(1600);
+				$("#div4").fadeIn(2000);
+				$("#div5").fadeIn(2400);
+			});
+		});
+		</script>
 </head>
 <body>
 
 <div class="topnav">
-    <a href = "index.html"><img src="kira.jpg" width="30" height="15"> </a>
-    <a href="index.html">Home</a>
+    <a href = "index.html"><img src="vidisite.png" width="30" height="15"> </a>
+    <a href="form.html">Catalog</a>
     <a href="services.html">Our Services</a>
     <a href="contact.html">Contact Us</a>
     <a href="jobs.html">Careers</a>
 </div>
+<div class="spacer">a</div>
+<div id="image"></div>
+
+        <div id="mainbody">
+        <article id="contact">
+            <h1>Services</h1>
+			</br>
+			<button>Click to Unveil A Breadth of Services</button><br><br>
+            <div class="row">
+				<div id="div1" style="display:none;>
+                <div class="column">
+                    <h2>Specialized Catalog</h2>
+                    <p>Developed with a mix of Cilk (also Cilk++ and Cilk plus), html, java, javascript, css,
+					XML, DCL (DIGITAL Command Language), Dart, LISA and MATLAB, VidiSite offers our famous
+					and coveted Vidisite Catalog. Developed within our in-house German database complex, filled
+					with the leading researchers' technologies and information-pods, our Catalog specializes in
+					scouring every video game on every platform for quality-insured code, free of bugs and poor gameplay
+					design. Combined with our leading team of 65 peer-reviewed video game scientists, our catalog
+					works with real people on the other end, sifting through the various options at your disposal
+					for easier searching. Essentially, it just works.</p>
+                </div>
+				<div id="div2" style="display:none;>
+                <div class="column">
+                    <h2>24/7 On-Call Service</h2>
+                    <p>Never feel alone and without assistance. We're here to answer any question
+					   you have, no matter how small or how great it may seem. Experience our customer
+					   service with your own eyes and ears. Engage us in our deep understanding of
+					   games for all kinds of peoples and ages. There's no need to worry when we have
+					   people who know what you, your kids, or your distant relatives will want to play. Contact information
+					   can be found in the Contact Us page. In-person assistance is currently limited
+					   due to recent events. Thank you for understanding.</p>
+                </div>
+				<div id="div3" style="display:none;>
+                <div class="column">
+                    <h2>Quality-Certified Game Selection</h2>
+                    <p>There's no greater place to find video games that are the best of the best than
+					   VidiSite. Each of our employees goes through 1500 hours of training and 6000 further
+					   hours of additional supervision before they can begin the lengthy process of determining
+					   whether or not a game is worthy of being displayed on our Catalog. The games in our selection
+					   are known for saving people from boredom, failing marriages, and even mental sickness. We
+					   talk face to face with the developers behind all games to ensure the process in which the games
+					   were made were under fair cirumstances, so that you don't have to worry about the wondering
+					   if these games were produced under ethical manners. We've got you covered.</p>
+                </div>
+				<div id="div4" style="display:none;>
+                <div class="column">
+                    <h2>Daily Updates</h2>
+                    <p>Every day, we run AI converged tests developed in Kitakyushu, Japan to determine if any
+					   new bugs have been added in hotfix or long-term updates in any and all of the games displayed
+					   within our selection. As such, we are constantly on the lookout for any games that may be removed
+					   from our pristine selection, and the games shown are always of the top condition, for the current day,
+					   for the ready buyer.</p>
+                </div>
+				<div id="div5" style="display:none;>
+                <div class="column">
+                    <h2>100% Guaranteed Satisfaction</h2>
+                    <p>Don't like the game you purchased? Though we don't sell them, we'll cover
+					   the costs as a sign of our confidence in our selection. Full money repayment.
+					   Guaranteed. We're that confident.</p>
+                </div>
+              </div>
+            </div>
+
 
 </body>
 </html>

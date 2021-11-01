@@ -1,8 +1,44 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Form</title>
+    <title>Catalog</title>
     <link rel="stylesheet" href="style.css">
+	<style>
+            #contact {
+                padding: 0 0 0 4%;
+                box-sizing: border-box;
+            }
+            #contact h1,h2{
+                font-weight: 600;
+                padding:0;
+            }
+            #contact h1 {
+              text-align: left;
+              margin-bottom: .7%;
+              margin: 0;
+            }
+            #contact h2 {
+              margin-top: 1%;
+            }
+            #contact a {
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+            }
+            #contact a:hover {
+                color: #389F16;
+            }
+            .column {
+              float: left;
+              width: 46%;
+              padding: 0 4% 0 0;
+            }
+            #mainbody {
+            padding: 2em 0;
+            margin: 1%;
+            background-color: #f0f0f0;
+            box-sizing: border-box;
+        }
+        </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,17 +53,17 @@
             err = false;
             with (document.data) {
                 if (!range1.checked && !range2.checked) {
-                    alert("Please specify at least 1 price range.");
+                    alert("Please specify a price range.");
                     err = true;
                 }
 
                 if (!years1.checked && !years2.checked && !years3.checked && !years4.checked && !years5.checked) {
-                    alert("Please specify at least 1 year range.");
+                    alert("Please specify a year range.");
                     err = true;
                 }
 
                 if (!pc.checked && !Xbox.checked && !PlayStation.checked && !Nintendo.checked) {
-                    alert("Please specify at least 1 platform.");
+                    alert("Please specify a platform.");
                     err = true;
                 }
 
@@ -49,20 +85,25 @@
 
 <body>
     <div class="topnav">
-        <a href = "adad"><img src="kira.jpg" width="30" height="15"> </a>
-        <a href="index.html">Home</a>
-        <a href="services.html">Our Services</a>
-        <a href="contact.html">Contact Us</a>
-    </div>
-    <div id="something">
-        <h1 style="text-align: left; padding-left: 0;">Specify your interests</h1>
+    <a href = "index.html"><img src="vidisite.png" width="30" height="15"> </a>
+    <a href="form.html">Catalog</a>
+    <a href="services.html">Our Services</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="jobs.html">Careers</a>
+	</div>
+    <div id="image"></div>
+	<div class="spacer">a</div>
+	
+    <div id="mainbody">
+	  <article id="contact">
+        <h1 style="text-align: left;">Catalog</h1>
         <form name="data" style="padding-left: 0" method="get" onsubmit="return validate()">
-            <div>Select your price range:</div>
+            <h2></br>Select your price range:</h2>
             <input type="radio" id="range1" name="price" value="range1">
             <label for="range1"> Under $30</label><br>
             <input type="radio" id="range2" name="price" value="range2">
             <label for="range1"> Over $30</label><br><br>
-            <div>Select your desired release date:</div>
+            <h2>Select your desired release date:</h2>
             <input type="radio" id="years1" name="years" value="years1">
             <label for="years1"> 2000 - 2005</label><br>
             <input type="radio" id="years2" name="years" value="years2">
@@ -73,7 +114,7 @@
             <label for="years4"> 2016 - 2020</label><br>
             <input type="radio" id="years5" name="years" value="years5">
             <label for="years5"> 2021 - Today</label><br><br>
-            <div>Select your platform:</div>
+            <h2>Select your platform:</h2>
             <input type="radio" id="pc" name="platform" value="PC">
             <label for="pc"> PC</label>
             <input type="radio" id="Xbox" name="platform" value="Xbox">
