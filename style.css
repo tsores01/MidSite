@@ -95,7 +95,7 @@ a:hover {
   background-color: #0D0F0F; 
   border: none;
   color: rgb(255, 255, 255);
-  padding: 1rem;
+  padding: .75rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
