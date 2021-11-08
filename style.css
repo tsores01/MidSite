@@ -49,6 +49,7 @@ img.one {
   padding: 14px 12px;
   text-decoration: none;
   font-size: 18px;
+  transition-duration: 0.4s;
 }
 
 .topnav a:hover {
