@@ -44,13 +44,17 @@
         width: 100%;
     }
     .column p {
-        text-align: center;
+        text-align: justify;
     }
     .button {
         display: block;
         text-align: center;
         margin: 0 auto;
         padding: .65em .55em;
+    }
+    #centertext{
+        margin: 2em 35%;
+        text-align: justify;
     }
 @media only screen and (max-width: 1280px) {
   #bg {
@@ -60,12 +64,20 @@
   .column {
       width: 100%;
     }
+    #centertext{
+        margin: 2em 25%;
+        text-align: justify;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     #bg {
         height: 7em;
         padding: 0 2.1%;
+    }
+    #centertext{
+        margin: 2em 15%;
+        text-align: justify;
     }
 }
 </style>
@@ -91,7 +103,7 @@
         <li><img id="bg" src="red-dead-redemption.jpg"> </li>
     </ul>
     <h2 style="margin: 1em 0;">Welcome to the nexus of video games</h2>
-    <p style="margin: 2em 25%; text-align: center;">Want to surprise a special someone but not sure what to get? Trying to find a new game to play 
+    <p id ="centertext">Want to surprise a special someone but not sure what to get? Trying to find a new game to play 
         but tired of going through all the different video game stores? Just browsing? You've come to the right place! 
         Here at VidiSite we specialize in cataloging only the best video games, so you can find them all in one
         place!</p>
