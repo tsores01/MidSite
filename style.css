@@ -17,7 +17,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -5;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -72,6 +72,21 @@ p {
   font-size: 17px;
 }
 
+#mainbody {
+  padding: 2em 0;
+  margin: 1%;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+}
+
+.topimage {
+  width: 98%;
+  height: 100px;
+  position: absolute;
+  margin: -2em 0 0 0;
+  z-index: 0;
+  object-fit: cover;
+}
 
 .column {
   float: left;
@@ -134,8 +149,17 @@ a:hover {
   text-align: center;
 }
 
+@media only screen and (max-width: 1280px) {
+  .topimage {
+    height: 90px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .column {
       width: 100%;
+    }
+    .topimage {
+      height: 90px;
     }
 }
