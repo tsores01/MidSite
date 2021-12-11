@@ -25,37 +25,76 @@
         height: 15em;
         overflow: hidden;
     }
-    #newsbg {
-        padding: 2em 0;
+    .newsbg {
         height: auto;
         overflow: hidden;
         text-align: center;
         display: block;
         margin: auto;
-        width: 80%;
+        width: 100%;
     }
     #mainbody {
-        padding: 1em 0;
-        margin: 1%;
-        background-color: #f0f0f0;
-        box-sizing: border-box;
+        padding: 0 0 2em 0;
     }
     #imgcarousel {
         width: 100%;
     }
+    
+    .column {
+        padding: 1.25em 0;
+    }
     .column p {
         text-align: justify;
+        color: #e4e4e4;
+    }
+    .column .content {
+        padding: 0 2em;
+    }
+    .content h3{
+        margin:0;
+        color: #e4e4e4;
+    }
+    .row.api .column {
+        width: 33.3%;
     }
     .button {
         display: block;
         text-align: center;
-        margin: 0 auto;
+        margin: 1em auto 0 auto;
         padding: .65em .55em;
+        color: rgb(0, 0, 0);
+        background-color: #e4e4e4;
     }
     #centertext{
         margin: 2em 35%;
         text-align: justify;
     }
+    .imgapi {
+        padding: 2em 0;
+        height: 13em;
+        overflow: hidden;
+        text-align: center;
+        display: block;
+        margin: auto;
+        object-fit: cover;
+        
+    }
+    .apititle {
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .select-div {
+        margin: 1em auto;
+    }
+    img[name="imgapi"] {
+        transition: transform 0.5s
+    }
+    img[name="imgapi"]:hover {
+        transform: scale(0.95);
+    }
+
 @media only screen and (max-width: 1280px) {
   #bg {
       height: 12em;
@@ -64,9 +103,15 @@
   .column {
       width: 100%;
     }
+    .row.api .column {
+        width: 100%;
+    }
     #centertext{
         margin: 2em 25%;
         text-align: justify;
+    }
+    .imgapi {
+        height: 10em;
     }
 }
 
@@ -78,6 +123,9 @@
     #centertext{
         margin: 2em 15%;
         text-align: justify;
+    }
+    .imgapi {
+        height: 18em;
     }
 }
 </style>
@@ -108,11 +156,61 @@
         Here at VidiSite we specialize in cataloging only the best video games, so you can find them all in one
         place!</p>
 
-        
-    <h3 style="font-size: 1.8em;">Check out the latest video game related news:</h3>
-    <div style="padding: 0 2em"class="row">
+
+      <h2>Want free stuff? Check out the best giveaways in gaming below</h2>
+      <h3>Choose your platform:</h3>
+      <div class="select-div">
+        <select id="platform" onchange="loadData()">
+            <option disabled selected value>Select an Option</option>
+            <option>PC</option>
+            <option>Steam</option>
+            <option>Epic-Games-Store</option>
+            <option>PS4</option>
+            <option>PS5</option>
+            <option>Xbox-One</option>
+            <option>Xbox-Series-XS</option>
+            <option>Switch</option>
+            <option>Android</option>
+            <option>IOS</option>
+            <option>Xbox-360</option>
+        </select>
+    </div>
+      <div style="display: none;" id="apirow" class="row api">
+        <div class="column">
+            <div style="width:100%;" class="column">
+                <div class="content">
+                    <h3 name ="title" class="apititle"></h3>
+                    <a name="reference" target="_blank"><img class="imgapi" name="imgapi"></a>
+                    <p name="desc"></p>
+                    </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+            <div style="width:100%;" class="column">
+                <h3 name ="title" class="apititle"></h3>
+                <a name="reference" target="_blank"><img class="imgapi" name="imgapi"></a>
+                <p name="desc"></p> 
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+            <div style="width:100%;" class="column">
+                <h3 name ="title" class="apititle"></h3>
+                <a name="reference" target="_blank"><img class="imgapi" name="imgapi"></a>
+                <p name="desc"></p> 
+            </div>
+            </div>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.8em;">Check out the latest video game related news:</h2>
+
+      <div style="background-color: #262c2c;" class="row">
         <div class="column">
             <div class="column">
+                <div class="content">
                 <h3> Xbox Game Pass Gets Surprise New Game</h3>
                 <p>The Xbox Game Pass library seems to get bigger every day. 
                     And while games occasionally disappear from the service, 
@@ -121,12 +219,16 @@
                     surprise PC title that just landed on consoles.</p>
                     <button target="_blank" onclick=" window.open('https://gamerant.com/xbox-game-pass-project-wingman/','_blank')" class="button" >Read more here</button>
             </div>
+            </div>
             <div class="column">
-            <img id="newsbg" src="Xbox_Game_Pass_Arrow_logo.jpg">
+                <div class="content">
+                    <img class="newsbg" src="Xbox_Game_Pass_Arrow_logo.jpg">
+                    </div>
             </div>
         </div>
         <div class="column">
             <div class="column">
+                <div class="content">
                 <h3>Sony's Next PlayStation Game Coming To PC May Have Been Revealed</h3>
                 <p>Sony is bringing more of its games to PC, and the company has 
                     even established a new publishing arm called PlayStation PC. 
@@ -136,14 +238,76 @@
                     "Steel PC," and the listing also mentions something called 
                     "Marmalade."</p> 
                     <button target="_blank" onclick=" window.open('https://www.gamespot.com/articles/sony-next-playstation-console-game-coming-to-pc-may-have-been-revealed/1100-6497492/','_blank')" class="button" >Read more here</button>
+                    </div>
             </div>
             <div class="column">
-            <img id="newsbg" src="news.png">
+                <div class="content">
+                <img class="newsbg" src="news.png">
+                </div>
             </div>
         </div>
       </div>
+
     
     </div>
 </div>
+<script>
+    window.onload = function() {
+        request = new XMLHttpRequest();
+        request.open("GET", "http://www.gamespot.com/api/articles/?api_key=5f30e01f5e65271aa166774b3f0baf9b08fee6a4&format=json", true);
+        request.withCredentials = true;
+    request.setRequestHeader('Access-Control-Allow-Headers', '*');
+    request.setRequestHeader('Access-Control-Allow-Origin', '*');
+
+    request.onreadystatechange = function() {
+        if (request.readyState == 4 && request.status == 200) {   
+            data = request.responseText;
+            data = JSON.parse(data);
+            alert("working1");
+        }
+        else if (request.readyState == 4 && request.status != 200) 
+        {  
+            alert("Request failed!");
+        }
+}
+    request.send;
+    }
+
+    function loadData() {
+    let x = document.getElementById("platform").value.toLowerCase();
+    request = new XMLHttpRequest();
+    request.open("GET", "https://gamerpower.p.rapidapi.com/api/giveaways?platform=" + x + "&sort-by=popularity", true);
+    request.withCredentials = true;
+    request.setRequestHeader('x-rapidapi-key', '241bcaecf0mshfafde6fd0116e61p16d96fjsnbf4ede1c5446');
+    request.setRequestHeader('Access-Control-Allow-Headers', '*');
+    request.setRequestHeader('Access-Control-Allow-Origin', '*');
+
+    
+request.onreadystatechange = function() {
+ 
+    if (request.readyState == 4 && 
+        request.status == 200) 
+    {   
+        data = request.responseText;
+        data = JSON.parse(data);
+        document.getElementById("apirow").style.display = "block";
+        document.getElementById("apirow").style.backgroundColor  = "#262c2c";
+        document.getElementById("mainbody").style.padding = 0;
+        for (let i = 0; i < 3; i++) {
+            document.getElementsByName("title")[i].innerHTML = data[i].title;
+            document.getElementsByName("desc")[i].innerHTML = data[i].description;
+            document.getElementsByName("imgapi")[i].src = data[i].image;
+            document.getElementsByName("reference")[i].href = data[i].gamerpower_url;
+        }
+        
+    }
+    else if (request.readyState == 4 && request.status != 200) 
+    {
+        alert("Request failed!");
+    }
+}
+request.send();
+}
+</script>
 </body>
 </html>
