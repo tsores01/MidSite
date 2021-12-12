@@ -45,14 +45,13 @@
             padding: 4em 0 0 4em;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script language="javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
 
         function validate() {
-		 winarr = new Array("under30.html","over30.html");
             err = false;
             with (document.data) {
-                if (!range1.checked && !range2.checked) {
+                if (!range1.checked && !range2.checked && !range3.checked && !range4.checked) {
                     alert("Please specify a price range.");
                     err = true;
                 }
@@ -62,24 +61,15 @@
                     err = true;
                 }
 
-                if (!pc.checked && !Xbox.checked && !PlayStation.checked && !Nintendo.checked) {
+                if (!pc.checked && !Xbox.checked && !PlayStation.checked && !Nintendo.checked && !any.checked) {
                     alert("Please specify a platform.");
                     err = true;
-                }
-
-                if (!err) {
-                    if (range1.checked) {
-                        window.open(winarr[0]);
-                    } else {
-                        window.open(winarr[1]);
-                    }
                 }
             }
 
             return !err;
         }
 
-        
     </script>
 </head>
 
@@ -87,9 +77,9 @@
     <div class="topnav">
         <a href = "index.html"><img src="vidisite.png" width="30" height="15"> </a>
         <a href="form.html">Catalog</a>
-        <a href="services.html">Our Services</a>
+        <a href="services.html">Services</a>
         <a href="jobs.html">Careers</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="contact.html">Contact</a>
 	</div>
     <div id="image"></div>
 	<div class="spacer">a</div>
@@ -98,25 +88,31 @@
     <img class="topimage" src="https://wallpapersmug.com/large/430736/landscape-art-video-game-no-mans-sky.jpg">
 	  <article id="contact" style="position:relative; z-index: 1;">
         <h1><span>Catalog</span></h1>
-        <form name="data" style="padding-left: 0" method="get" onsubmit="return validate()">
+        <form name="data" style="padding-left: 0" method="post" onsubmit="return validate()" action="process.php">
             <h2></br>Select your price range:</h2>
-            <input type="radio" id="range1" name="price" value="range1">
-            <label for="range1"> Under $30</label><br>
-            <input type="radio" id="range2" name="price" value="range2">
-            <label for="range1"> Over $30</label><br><br>
+            <input type="radio" id="100" name="price" value="100" checked="checked">
+            <label for="range1"> Any Price</label><br>
+            <input type="radio" id="50" name="price" value="50">
+            <label for="range1"> $50 and under</label><br>
+            <input type="radio" id="40" name="price" value="40">
+            <label for="range1"> $40 and under</label><br>
+            <input type="radio" id="30" name="price" value="30">
+            <label for="range1"> $30 and under</label><br><br>
             <h2>Select your desired release date:</h2>
-            <input type="radio" id="years1" name="years" value="years1">
-            <label for="years1"> 2000 - 2005</label><br>
-            <input type="radio" id="years2" name="years" value="years2">
-            <label for="years2"> 2006 - 2010</label><br>
-            <input type="radio" id="years3" name="years" value="years3">
-            <label for="years3"> 2011 - 2015</label><br>
-            <input type="radio" id="years4" name="years" value="years4">
-            <label for="years4"> 2016 - 2020</label><br>
-            <input type="radio" id="years5" name="years" value="years5">
-            <label for="years5"> 2021 - Today</label><br><br>
+            <input type="radio" id="2021" name="years" value="2021" checked="checked">
+            <label for="years1"> Any Year</label><br>
+            <input type="radio" id="2020" name="years" value="2020">
+            <label for="years2"> 2020 and earlier</label><br>
+            <input type="radio" id="2015" name="years" value="2015">
+            <label for="years3"> 2015 and earlier</label><br>
+            <input type="radio" id="2010" name="years" value="2010">
+            <label for="years4"> 2010 and earlier</label><br>
+            <input type="radio" id="2005" name="years" value="2005">
+            <label for="years5"> 2005 and earlier</label><br><br>
             <h2>Select your platform:</h2>
-            <input type="radio" id="pc" name="platform" value="PC">
+            <input type="radio" id="any" name="platform" value="any" checked="checked">
+            <label for="any"> Any Platform</label>
+            <input type="radio" id="PC" name="platform" value="PC">
             <label for="pc"> PC</label>
             <input type="radio" id="Xbox" name="platform" value="Xbox">
             <label for="Xbox"> Xbox</label>
