@@ -22,7 +22,7 @@
         font-weight: 500;
     }
     #bg {
-        height: 15em;
+        height: 20vw;
         overflow: hidden;
     }
     .newsbg {
@@ -97,8 +97,12 @@
 
 @media only screen and (max-width: 1280px) {
   #bg {
-      height: 12em;
       padding: 0 2.25%;
+  }
+  .newsbg {
+      height: 10em;
+      object-fit: cover;
+      width: auto;
   }
   .column {
       width: 100%;
@@ -112,12 +116,12 @@
     }
     .imgapi {
         height: 10em;
+        object-fit: cover;
     }
 }
 
 @media only screen and (max-width: 768px) {
     #bg {
-        height: 7em;
         padding: 0 2.1%;
     }
     #centertext{
@@ -125,7 +129,19 @@
         text-align: justify;
     }
     .imgapi {
-        height: 18em;
+        height: 10em;
+        object-fit: cover;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .imgapi {
+        width: -webkit-fill-available;
+    }
+    .newsbg {
+        width: -webkit-fill-available;
+    }
+    .topnav a {
+        font-size: 5vw;
     }
 }
 </style>
@@ -144,11 +160,12 @@
     <div id="mainbody">
     <h1>VidiSite</h1>
     <ul class="list">
-        <li><img id="bg" src="zelda.jpg"></li>
-        <li><img id="bg" src="the-last-of-us.jpg"></li>
-        <li><img id="bg" src="forza-horizon-4.jpg"> </li>
-        <li><img id="bg" src="half-life-2.jpg"> </li>
-        <li><img id="bg" src="red-dead-redemption.jpg"> </li>
+        <li><img id="bg" src="imagefolder/zelda.jpg"></li>
+        <li><img id="bg" src="imagefolder/the-last-of-us.jpg"></li>
+        <li><img id="bg" src="imagefolder/forza-horizon-4.jpg"> </li>
+        <li><img id="bg" src="imagefolder/halo.jpg"> </li>
+        <li><img id="bg" src="imagefolder/ori.jpg"> </li>
+        
     </ul>
     <h2 style="margin: 1em 0;">Welcome to the nexus of video games</h2>
     <p id ="centertext">Want to surprise a special someone but not sure what to get? Trying to find a new game to play 

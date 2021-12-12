@@ -205,4 +205,13 @@ select{
     .topimage {
       height: 90px;
     }
+    .topnav a {
+      padding: 14px 8px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+  .topnav a {
+      font-size: 5vw;
+  }
 }
